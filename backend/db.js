@@ -7,7 +7,7 @@ const pg = require('pg');
   host: "localhost",
   database: "spotify",
   password: "bionicle2006",
- // password: "L1nk3d",
+  //password: "L1nk3d",
   port: 5432,
 });  
 

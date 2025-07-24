@@ -3,7 +3,7 @@ const app= express()
 const cors= require('cors')
 require('dotenv').config();
 const usersRoutes= require('./routes/users')
-
+const historyRoutes=require('./routes/history')
 const songsRoutes= require('./routes/songs')
 const moviesRoutes= require('./routes/movies')
 const commentsRoutes= require('./routes/comments')
@@ -16,7 +16,7 @@ const pg = require('pg');
 
 app.use(cors())
 app.use(express.json())
-
+app.use('/history',historyRoutes)
 app.use('/users',usersRoutes)
 app.use('/playlistSongs',playlistSongsRoutes)
 app.use('/songs',songsRoutes)
